@@ -12,6 +12,17 @@
       return sentence.split(" ").length;
     }
 
+    function getWordCount1(sentence) {
+      var ar = 1
+      for (i=0; i<sentence.length; i++) {
+        console.log(sentence[i])
+       if(sentence[i] === " ") {
+         ar++
+       }
+      }
+      return ar;
+    }
+
 
   </script>
 </body>
