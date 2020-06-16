@@ -10,9 +10,7 @@
   <script>
     function freeCoffeeCups(coffeeCups) {
       var add = 0;
-      if(coffeeCups === 1) {
-        return 1;
-      }else if (coffeeCups/6 > 0) {
+      if (coffeeCups/6 > 0) {
         add = Math.floor(coffeeCups/6);
       }
       return coffeeCups + add;
