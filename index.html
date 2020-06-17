@@ -9,22 +9,23 @@
 
   <script>
 
-    function wordBuilder(wordToSpell) {
+    function removeNullValues(array) {
       var result = [];
-      var word = "";
-      for(var i=0; i<wordToSpell.length; i++) {
-        word += wordToSpell[i];
-        result.push(word);
-      }
-      return result;
+      for (var i=0; i<array.length; i++){
+        if(array[i] !== null){
+          result.push(array[i]);
+        }
     }
+    return result;
+    }
+    console.log(removeNullValues([3, 5, null, null, 87, "hello", "goodbye"]));
+    console.log(removeNullValues([true, null, false, {}, null, 43, "node"]));
+    console.log(removeNullValues([null, null, null, 7, null, "eight"]));
 
-    console.log(wordBuilder("JavaScript"));
-    console.log(wordBuilder("Moon"));
-    console.log(wordBuilder("Stars"));
 
 
-    
+
+
   </script>
 </body>
 </html>
