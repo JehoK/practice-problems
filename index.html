@@ -8,29 +8,20 @@
 <body>
 
 
-  <script>
-  
-    function sp (stringNumber) {
-      return stringNumber.split(".")[1].length;
-    }
-    console.log(sp("127.224"));
-    console.log(sp("23513.444224"));
-    console.log(sp("7.2"));
 
-    function sp2 (stringNumber) {
-      for(var i=0; i<stringNumber.length; i++) {
-        if(stringNumber[i] === ".") {
-          return stringNumber.length - i -1;
+
+  <script>
+    
+    function createRepeatingLetters(word, numOfRepeats) {
+      var result = "";
+      for(i=0; i<word.length; i++) {
+        for(k=0; k<numOfRepeats; k++){
+          result += word[i];
         }
       }
-      return 0;
+      return result;
     }
-
-  console.log(sp2("127.224"));
-  console.log(sp2("23513.444224"));
-  console.log(sp2("7.2"));
-
-
+    
   </script>
 </body>
 </html>
