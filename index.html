@@ -9,22 +9,20 @@
 
   <script>
 
-    function oddUpEvenDown(array) {
-      var result = [];
-      for(var i=0; i<array.length; i++) {
-        if(array[i] % 2 === 1){
-          array[i]++;
-          result.push(array[i]);
-        }else {
-          array[i]--;
-          result.push(array[i]);
-        }
+    function freeCoffeeCups(coffeeCups) {
+      var add = 0;
+      if (coffeeCups/6 > 0) {
+        add = Math.floor(coffeeCups/6);
       }
-      return result;
+      return coffeeCups + add;
     }
-    console.log(oddUpEvenDown([1, 2, 3, 4, 5]));
-    console.log(oddUpEvenDown([23, 15, 18, 14, 32]));
-    console.log(oddUpEvenDown([72, 212, 77, 124, 53]));
+
+    console.log(freeCoffeeCups(13));
+    console.log(freeCoffeeCups(6));
+    console.log(freeCoffeeCups(5));
+
+
+
 
 
   </script>
