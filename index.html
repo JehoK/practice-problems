@@ -7,22 +7,29 @@
 </head>
 <body>
 
- <script>
 
-    function isTheAverageWhole(numbersArray) {
-      var result = 0;
-      for(var i=0; i<numbersArray.length; i++){
-        result += numbersArray[i];
-      }
-      if((result % numbersArray.length) === 0) {
-        return true;
-      }else {
-        return false;
-      }
+  <script>
+  
+    function sp (stringNumber) {
+      return stringNumber.split(".")[1].length;
     }
-      console.log(isTheAverageWhole([1, 3, 4, 4]));
-      console.log(isTheAverageWhole([3, 4]));
-      console.log(isTheAverageWhole([5, 5, 5]));
+    console.log(sp("127.224"));
+    console.log(sp("23513.444224"));
+    console.log(sp("7.2"));
+
+    function sp2 (stringNumber) {
+      for(var i=0; i<stringNumber.length; i++) {
+        if(stringNumber[i] === ".") {
+          return stringNumber.length - i -1;
+        }
+      }
+      return 0;
+    }
+
+  console.log(sp2("127.224"));
+  console.log(sp2("23513.444224"));
+  console.log(sp2("7.2"));
+
 
   </script>
 </body>
