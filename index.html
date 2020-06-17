@@ -7,28 +7,22 @@
 </head>
 <body>
 
+ <script>
 
-
-  <script>
-    function isWithinRange(number, rangeObject) {
-      if(number >= rangeObject.min && number <= rangeObject.max){
+    function isTheAverageWhole(numbersArray) {
+      var result = 0;
+      for(var i=0; i<numbersArray.length; i++){
+        result += numbersArray[i];
+      }
+      if((result % numbersArray.length) === 0) {
         return true;
       }else {
         return false;
       }
     }
-    // create function named isWithRange with two parameter number and rangeobject.
-    //check whether number is greater or equal to min property and less than or equal to max property
-    //if it is, then return true
-    // if it isn't, then return false
-
-
-    console.log(isWithinRange(5, { min: 1, max: 9 }));
-    console.log(isWithinRange(12, { min: 15, max: 29 }));
-    console.log(isWithinRange(9, { min: 0, max: 9 }));
-
-  
-
+      console.log(isTheAverageWhole([1, 3, 4, 4]));
+      console.log(isTheAverageWhole([3, 4]));
+      console.log(isTheAverageWhole([5, 5, 5]));
 
   </script>
 </body>
