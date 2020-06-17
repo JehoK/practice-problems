@@ -9,18 +9,22 @@
 
   <script>
 
-    function isSantaComing(dateObject) {
-      if (dateObject.getDate() === 24 && dateObject.getMonth() === 11){
-        return true;
-      }else {
-        return false;
+    function wordBuilder(wordToSpell) {
+      var result = [];
+      var word = "";
+      for(var i=0; i<wordToSpell.length; i++) {
+        word += wordToSpell[i];
+        result.push(word);
       }
+      return result;
     }
 
-    console.log(isSantaComing(new Date(2001, 11, 24)));
-    console.log(isSantaComing(new Date(2018, 7, 4)));
-    console.log(isSantaComing(new Date(1995, 11, 23, 23, 59, 59)));
+    console.log(wordBuilder("JavaScript"));
+    console.log(wordBuilder("Moon"));
+    console.log(wordBuilder("Stars"));
 
+
+    
   </script>
 </body>
 </html>
