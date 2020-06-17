@@ -7,23 +7,27 @@
 </head>
 <body>
 
+
+
   <script>
-
-    function removeNullValues(array) {
-      var result = [];
-      for (var i=0; i<array.length; i++){
-        if(array[i] !== null){
-          result.push(array[i]);
-        }
+    function isWithinRange(number, rangeObject) {
+      if(number >= rangeObject.min && number <= rangeObject.max){
+        return true;
+      }else {
+        return false;
+      }
     }
-    return result;
-    }
-    console.log(removeNullValues([3, 5, null, null, 87, "hello", "goodbye"]));
-    console.log(removeNullValues([true, null, false, {}, null, 43, "node"]));
-    console.log(removeNullValues([null, null, null, 7, null, "eight"]));
+    // create function named isWithRange with two parameter number and rangeobject.
+    //check whether number is greater or equal to min property and less than or equal to max property
+    //if it is, then return true
+    // if it isn't, then return false
 
 
+    console.log(isWithinRange(5, { min: 1, max: 9 }));
+    console.log(isWithinRange(12, { min: 15, max: 29 }));
+    console.log(isWithinRange(9, { min: 0, max: 9 }));
 
+  
 
 
   </script>
