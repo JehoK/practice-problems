@@ -8,20 +8,29 @@
 <body>
 
 
-
-
   <script>
-    
-    function createRepeatingLetters(word, numOfRepeats) {
-      var result = "";
-      for(i=0; i<word.length; i++) {
-        for(k=0; k<numOfRepeats; k++){
-          result += word[i];
-        }
-      }
-      return result;
+    function getWordCount(sentence) {
+      return sentence.split(" ").length;
     }
+
     
+    function getWordCount1(sentence) {
+      var ar = 1
+      for (i=0; i<sentence.length; i++) {
+        console.log(sentence[i])
+       if(sentence[i] === " ") {
+         ar++
+       }
+      }
+      return ar;
+    }
+
+
+
+
+
+
+  
   </script>
 </body>
 </html>
