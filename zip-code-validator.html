@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+    function zipCodeValidator(zipToValidate) {
+      if(zipToValidate.length > 5){
+        return false;
+      }else {
+        zipToValidate = Number(zipToValidate);
+        if(isNaN(zipToValidate)) {
+          return false;
+        }else {
+          return true;
+        }
+      }
+    }
+
+    function zipCodeValidator(zipToValidate) {
+        let result = "";
+
+        for (let i = 0; i < zipToValidate.length; i++) {
+          if (zipToValidate[i] >= 0 && zipToValidate[i] <= 9 && zipToValidate[i] !== " ") {
+            result += zipToValidate[i];
+          } else {
+            return false;
+          }
+        }
+
+        return result.length === 5 ? true : false;
+      }
+
+      console.log(zipCodeValidator("21294"));
+      console.log(zipCodeValidator("3Eds32"));
+      console.log(zipCodeValidator("9123465"));
+
+
+
+  </script>
+</body>
+</html>
