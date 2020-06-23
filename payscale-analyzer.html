@@ -24,6 +24,25 @@
     console.log(payscaleAnalyzer([28, 34, 21, 39]));
     console.log(payscaleAnalyzer([18, 22, 19, 26]));
     console.log(payscaleAnalyzer([41.50, 27.25, 32.50, 29.60]));
+
+    data.artist -> youtube
+
+
+    $.ajax({
+      method: "GET",
+      url: "https://app.ticketmaster.com/discovery/v2/",
+      success: function(data){
+        console.log(data)
+      },
+      error: function(data){
+        console.error(data);
+      }
+    })
+
+
+
   </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
 </body>
 </html>
