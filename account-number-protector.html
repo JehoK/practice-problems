@@ -10,10 +10,13 @@
   <script>
     function accountNumberProtector(cardNumberString) {
       let result = "**";
-      result +=  cardNumberString[12];
-      result += cardNumberString[13];
-      result += cardNumberString[14];
-      result += cardNumberString[15];
+      for(let i=12; i<16; i++){
+        result += cardNumberString[i];
+      }
+      // result +=  cardNumberString[12];
+      // result += cardNumberString[13];
+      // result += cardNumberString[14];
+      // result += cardNumberString[15];
       return result;
     }
 
