@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    function accountNumberProtector(cardNumberString) {
+      let result = "**";
+      for(let i=12; i<16; i++){
+        result += cardNumberString[i];
+      }
+      // result +=  cardNumberString[12];
+      // result += cardNumberString[13];
+      // result += cardNumberString[14];
+      // result += cardNumberString[15];
+      return result;
+    }
+
+    console.log(accountNumberProtector("5543223485638832"));
+    console.log(accountNumberProtector("8934235477210943"));
+    console.log(accountNumberProtector("7513635499320192"));
+  </script>
+</body>
+</html>
